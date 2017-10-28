@@ -1,45 +1,22 @@
 <!DOCTYPE html>
 <head>
-	<title>盗梦空间</title>
-	<style>
-		.musicboy{
-			border-radius:500px;
-			border-style:solid;
-			border-width:5px;
-			width:300px;
-			height: 300px;
-			animation:circle 10s infinite linear paused;/*匀速 循环*/
-		}
-		@keyframes circle{
-			0%{ transform:rotate(0deg); }
-			100%{ transform:rotate(360deg); }
-		}
-	</style>
+	<title>silence.fm</title>
+	<link type="text/css" rel="stylesheet" href="static/index.css" />
+	<link href="picture/musicBoy.jpg" rel="shortcut icon" />
+	<script src="static/index.js"></script>
 </head>
 <body>
 <audio id='bgMusic' width="320" height="240" loop='loop'>
   <source src="musiclib/梦伴.mp3" type="audio/mpeg" />
   你的浏览器不支持音频播放
 </audio>
-<div>
-	<!-- <img src="picture/prev.png"> -->
-	<img id='boy' class='musicboy' src="picture/musicBoy.jpg" onclick='play()'>
-	<!-- <img src="picture/next.png"> -->
+<div class='container'>
+	<div class='title'>silence.fm</div>
+	<div class='theme'>beats for life, love</div>
+	<div class='player'>
+		<img class='prevandnext' src="picture/prev.jpg">
+		<img id='boy' class='musicboy' src="picture/musicBoy.jpg" onclick='play()'>
+		<img class='prevandnext' src="picture/next.jpg">
+	</div>
 </div>
-<script>
-	var music = false;
-	function play(){
-		var audio = document.getElementById("bgMusic");
-		var img = document.getElementById('boy');
-		if(music){
-			audio.pause();
-			img.style.animation = 'circle 10s infinite linear paused';
-		}
-		else{
-			audio.play();
-			img.style.animation = 'circle 10s infinite linear running';
-		}
-		music = !music;
-	}
-</script>
 </body>
