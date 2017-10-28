@@ -1,0 +1,43 @@
+.musicboy{
+	border-radius:500px;
+	border-style:solid;
+	border-width:5px;
+	width:400px;
+	height: 400px;
+	animation:circle 10s infinite linear paused;/*匀速 循环*/
+}
+
+@keyframes circle{
+	0%{ transform:rotate(0deg); }
+	100%{ transform:rotate(360deg); }
+}
+
+.container{
+	margin:0 auto;
+	text-align: center;
+	font-family:'Source Sans Pro', sans-serif;
+}
+
+.title{
+	margin:0 auto;
+	margin-top:300px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	border-style: solid;
+	border-radius: 80px;	/*圆角*/
+	font-size: 100px;
+	width: 650px;
+	height: 170px;
+	line-height : 170px;	/*上下居中*/
+}
+
+.theme{
+	margin-top:80px;
+	font-size: 50px;
+	text-align: center;
+}
+
+.player{
+	margin-top:80px;
+}
