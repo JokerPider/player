@@ -13,3 +13,12 @@ function play(){
 	}
 	music = !music;
 }
+
+function volumeCtrl(v){
+	document.getElementByTag('audio').volumen = v / 10;
+}
+
+function nomoney(){
+	// document.getElementById("money").innerHTML = '没钱买音乐';
+	alert("没钱换音乐。。。");
+}
