@@ -20,5 +20,5 @@ function volumeCtrl(v){
 
 function nomoney(){
 	// document.getElementById("money").innerHTML = '没钱买音乐';
-	alert("没钱换音乐。。。");
+	alert("no more song ...");
 }
