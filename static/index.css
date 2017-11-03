@@ -1,53 +1,63 @@
-.musicboy{
-	border-radius:500px;
-	border-style:solid;
-	border-width:5px;
-	width: 400px;
-	height: 400px;
-	animation:circle infinite linear paused;/*匀速 循环*/
+@media screen and (max-width:699px) {
+	*{
+		border-style: solid;
+		-webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;
+	}
+	.musicboy{
+		border-radius:500px;
+		border-style:solid;
+		border-width:5px;
+		width: 400px;
+		height: 400px;
+		animation:circle infinite linear paused;/*匀速 循环*/
+	}
+
+	@keyframes circle{
+		0%{ transform:rotate(0deg); }
+		100%{ transform:rotate(360deg); }
+	}
+
+	.container{
+	    width: 1000px;
+		margin:0 auto;
+		align-items: center;
+		text-align: center;
+		font-family:'Source Sans Pro', sans-serif;
+	}
+
+	.title{
+		margin:0 auto;
+		margin-top:20%;
+		color: white;
+		background-color: black;
+		text-align: center;
+		border-radius: 80px;	/*圆角*/
+		font-size: 100px;
+		width: 80%;
+		height: 170px;
+		line-height : 170px;	/*上下居中*/
+	}
+
+	.theme{
+		margin-top:10%;
+		font-size: 50px;
+		text-align: center;
+	}
+
+	.player{
+		margin-top:40%;
+	}
+
+	.prevandnext{
+		line-height : 40%;
+	}
 }
 
-@keyframes circle{
-	0%{ transform:rotate(0deg); }
-	100%{ transform:rotate(360deg); }
-}
-
-.container{
-	border-style: solid;
-    width: 1000px;
-	margin:0 auto;
-	align-items: center;
-	text-align: center;
-	font-family:'Source Sans Pro', sans-serif;
-}
-
-.title{
-	border-style: solid;
-	margin:0 auto;
-	margin-top:20%;
-	color: white;
-	background-color: black;
-	text-align: center;
-	border-radius: 80px;	/*圆角*/
-	font-size: 100px;
-	/*width: 80%;*/
-	height: 170px;
-	line-height : 170px;	/*上下居中*/
-}
-
-.theme{
-	border-style: solid;
-	margin-top:10%;
-	font-size: 50px;
-	text-align: center;
-}
-
-.player{
-	border-style: solid;
-	margin-top:40%;
-}
-
-.prevandnext{
-	border-style: solid;
-	line-height : 40%;
+@media screen and (min-width:700px) {
+	*{
+		display: none;
+		
+	}
 }
