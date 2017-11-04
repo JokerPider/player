@@ -1,24 +1,21 @@
-var music = false;
+$(document).ready(function(){
+  $(".prevandnext").click(function(){
+  	alert("no more song ...");
+  });
 
-function play(){
-	var audio = document.getElementById("bgMusic");
-	var img = document.getElementById('boy');
-	if(music){
-		audio.pause();
-		img.style.animation = 'circle 10s infinite linear paused';
-	}
-	else{
-		audio.play();
+
+  var player = $('audio')[0];
+  var img = $('#boy')[0];
+ 
+  $('#boy').click(function(){
+	if(player.paused){
+		player.play();
 		img.style.animation = 'circle 10s infinite linear running';
+	}else{
+	 	player.pause();
+	 	img.style.animation = 'circle 10s infinite linear paused';
 	}
-	music = !music;
-}
+  });
 
-function volumeCtrl(v){
-	document.getElementByTag('audio').volumen = v / 10;
-}
 
-function nomoney(){
-	// document.getElementById("money").innerHTML = '没钱买音乐';
-	alert("no more song ...");
-}
+});
